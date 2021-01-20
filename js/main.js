@@ -1,4 +1,10 @@
-window.onload = function()
+window.onload = function() {
     document.getElementsById("inputBox").oninput = function (){
-        removeAllSections();
+       clearCards();
     }
+}
+
+function clearCards() {
+    var parent = document.getElementById("card");
+    parent.innerHTML = '';
+}

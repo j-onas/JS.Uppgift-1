@@ -4,14 +4,15 @@ html {
 }
 
 header {
-    display:block;
-    height: auto;
+    top: 0;
+    height: 55px;
     width: 100%;
     background-color: #1E1F1C;
     padding: 0;
     margin: 0;    
-    position: fixed;
+    position: absolute;
 }
+
 #pagetitle {
     text-align: left;
     margin-left: 80px;
@@ -20,14 +21,12 @@ header {
 
 #blogCounter {
     float: right;
-    height: 100%;
-    color:  #D4AF37;
-    margin-right: 10%;
+    color: #D4AF37;
+    margin-right: 5px;
     margin-top: 10px;
 }
 
 #inputBox {
-    display: block;
     width: 70px;
 }
 
@@ -40,42 +39,41 @@ header {
 }
 
 main {
-    padding: 0;
-    margin: 0;
+    width: 100%;
     margin-left: 10%;
-    margin-right: 10%;
-    width: auto;
-    height: auto;
-    overflow: auto;
+    margin-top: 100px;
 } 
 
 #cards {
-    flex: 1;
-    /*background-color: red;*/
-    height: auto;
-    width: auto;
+    max-width: 100%;
     display: grid;
-    margin-top: 10%;
-    grid-template-columns: 30%;
-    grid-template-rows: 85px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 260px);
+    row-gap: 10px;
+    
 }
 
 #card {
-    height: 85px;
+    display: block;
+    height: 100px;
+    width: 250px;
     background-color: white;
-    border: thin solid black;
-    
-    
+    border:thin solid black;
 }
 
 #card h1{
     height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
     font-weight: bold;
-    border-bottom: thin solid black;
+    border-bottom: solid thin black;
 }
 
+#card p{
+    height: 80px;
+    word-wrap: break-all;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 
 
