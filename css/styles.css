@@ -1,53 +1,87 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #272822;
 }
 
 header {
-    height: 70px;
+    display:block;
+    height: auto;
     width: 100%;
     background-color: #1E1F1C;
-    
+    padding: 0;
+    margin: 0;    
+    position: fixed;
 }
 
 #pagetitle {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    text-align: left;
+    margin-left: 80px;
 }
 
 #pagetitle h1 {
     font-size: 50px;
     color: #D4AF37;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin-bottom: 8px;
 }
 
+main {
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+    height: auto;
+    overflow: auto;
+} 
 
+#cards {
+    flex: 1;
+    /*background-color: red;*/
+    height: auto;
+    width: auto;
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: 30%;
+    grid-template-rows: 85px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
 
+#card {
+    height: 85px;
+    background-color: white;
+    border: thin solid black;
+    
+    
+}
+
+#card h1{
+    height: 20px;
+    font-weight: bold;
+    border-bottom: thin solid black;
+}
 
 
 
 
 footer {
-    height: 70px;
+    height: 50px;
     width: 100%;
-    background-color: #1E1F1C;
     position: fixed;
     bottom: 0;
     color:  #D4AF37;
+    background-color: #1E1F1C;
 }
 
 #blogCounter {
-    position: absolute;
+    float: right;
+    height: 100%;
     right: 0;
-    bottom: 0;
-    margin-bottom: 20px;
 }
 
 #inputBox {
-    width: 100px;
+    display: block;
+    width: 70px;
 }
