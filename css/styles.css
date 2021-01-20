@@ -9,14 +9,45 @@ html {
 }
 
 header {
-    display: block;
-    height: auto;
+    height: 70px;
     width: 100%;
     background-color: #1E1F1C;
     
 }
 
-header h1 {
-    font-size: 39px;
+#pagetitle {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#pagetitle h1 {
+    font-size: 50px;
+    color: #D4AF37;
+}
+
+
+
+
+
+
+
+footer {
+    height: 70px;
+    width: 100%;
+    background-color: #1E1F1C;
+    position: fixed;
+    bottom: 0;
+    color:  #D4AF37;
+}
+
+#blogCounter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+#inputBox {
+    width: 100px;
 }
