@@ -12,10 +12,23 @@ header {
     margin: 0;    
     position: fixed;
 }
-
 #pagetitle {
     text-align: left;
     margin-left: 80px;
+    float: left;
+}
+
+#blogCounter {
+    float: right;
+    height: 100%;
+    color:  #D4AF37;
+    margin-right: 10%;
+    margin-top: 10px;
+}
+
+#inputBox {
+    display: block;
+    width: 70px;
 }
 
 #pagetitle h1 {
@@ -71,17 +84,5 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    color:  #D4AF37;
     background-color: #1E1F1C;
-}
-
-#blogCounter {
-    float: right;
-    height: 100%;
-    right: 0;
-}
-
-#inputBox {
-    display: block;
-    width: 70px;
 }
