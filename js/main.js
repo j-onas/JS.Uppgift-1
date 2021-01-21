@@ -5,25 +5,24 @@
 
 
 */
-window.onload = function() {
-    //Hämta informationen som finns i inputBox och kalla på den med "this"
-    document.getElementById("inputBox").oninput = function (){
+function cardEngine() {
+    //Hämta informationen som finns i inputBox
+    var input = document.getElementById("inputBox")
 
-        //Rensa upp gammla posts
-        clearCards();
+    //Rensa upp gammla posts
+    clearCards();
 
-        //Gör om informationen till en int
-        var posts = parseInt(this.value);
-
-        //Tillåt inte för många posts åt gången
-        if(posts < 100 && posts > 0) {
-            buildCards(posts);
-        }else{
-            alert("Minimum: 1\nMaximum: 100")
-        }
-        
-    }
+    //Gör om informationen till en int
+    var posts = parseInt(input.value);
+    
+    //Tillåt inte för många posts åt gången
+    if(posts < 100 && posts > 0) {
+        buildCards(posts);
+    }else{
+        alert("Minimum: 1\nMaximum: 100")
+    }   
 };
+
 
 function buildCards(count, parent) {
     //alert(count+"\n"+parent);
