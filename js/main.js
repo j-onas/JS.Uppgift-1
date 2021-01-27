@@ -14,9 +14,9 @@ function cardEngine() {
 
     //Gör om informationen till en int
     var posts = parseInt(input.value);
-    
+
     //Tillåt inte för många posts åt gången
-    if(posts < 100 && posts > 0) {
+    if(posts < 101 && posts > 0) {
         buildCards(posts);
     }else{
         alert("Minimum: 1\nMaximum: 100")
