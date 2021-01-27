@@ -16,7 +16,6 @@ function cardEngine() {
     var posts = parseInt(input.value);
 
     //Tillåt inte för många posts åt gången
-    
     if(posts < 101 && posts > 0) {
         buildCards(posts);
     }else{
