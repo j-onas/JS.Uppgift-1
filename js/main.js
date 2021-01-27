@@ -1,26 +1,30 @@
 //Script som laddar när sidan öppnar sig
 /*
-    Jag använde developer tool console i chrome för att debugga koden
-
-
-
+    Använde mig utav konsolen i chrome och alerts för debugging
 */
-function cardEngine() {
-    //Hämta informationen som finns i inputBox
-    var input = document.getElementById("inputBox")
 
-    //Rensa upp gammla posts
-    clearCards();
+//Väntar på all html att ladda in
+//Lägg till nya kort beroende på 
+window.onload=function(){
+    var input = document.querySelector("input");
+    input.addEventListener("input", function(){
+        
+        //Ta bort alla kort som redan finns
+        clearCards();
+        
+        //Gör om från string till int
+        var posts = parseInt(input.value);
 
-    //Gör om informationen till en int
-    var posts = parseInt(input.value);
+        //Kollar om antalet kort är okej
+        if(posts < 101 && posts > 0) {
+            //Kallar på funktionen buildCards
+            buildCards(posts);
 
-    //Tillåt inte för många posts åt gången
-    if(posts < 101 && posts > 0) {
-        buildCards(posts);
-    }else{
-        alert("Minimum: 1\nMaximum: 100")
-    } 
+        }else{
+            //Varnar om för få eller för många kort
+            alert("Minimum: 1\nMaximum: 100")
+        }
+    });
 };
 
 
